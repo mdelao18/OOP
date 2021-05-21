@@ -1,10 +1,12 @@
 package com.ucreativa;
 
+import com.ucreativa.familia.Melissa;
+
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-    System.out.println("Hola clase");
+	Melissa bella = new Melissa();
+
 
     }
 }
