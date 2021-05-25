@@ -11,6 +11,6 @@ public class Main {
     mama.setAge();
 
     int age = mama.getAge();
-        System.out.println("La edad de mi mamá es " + age +" años, y su hobby es " +mama.getHobby());
+        System.out.println("La edad de mi madre es " + age +" años, y su hobby es " +mama.getHobby());
     }
 }

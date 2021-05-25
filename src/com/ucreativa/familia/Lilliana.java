@@ -6,7 +6,7 @@ public class Lilliana {
     private  String hobby;
 
     public Lilliana(String saludo){
-        this.age = 62;
+        this.age = 63;
         this.hobby = "hacer ejercicio";
         System.out.println(saludo);
     }
