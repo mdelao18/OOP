@@ -7,7 +7,10 @@ public class Main {
 
     public static void main(String[] args) {
 	Melissa bella = new Melissa();
-    Lilliana mama = new Lilliana("Hola hola");
+    Lilliana mama = new Lilliana("Hola mi chiquita");
+    mama.setAge();
 
+    int age = mama.getAge();
+        System.out.println("La edad de mi mamá es " + age +" años, y su hobby es " +mama.getHobby());
     }
 }

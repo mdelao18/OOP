@@ -2,9 +2,26 @@ package com.ucreativa.familia;
 
 public class Lilliana {
 
-    public Lilliana(String saludo){
+    private  int age;
+    private  String hobby;
 
+    public Lilliana(String saludo){
+        this.age = 62;
+        this.hobby = "hacer ejercicio";
         System.out.println(saludo);
     }
 
+    public void setAge (){
+        this.age = this.age + 1;
+    }
+
+    public int getAge (){
+        return this.age;
+    }
+
+    public String getHobby(){
+        return hobby;
+    }
 }
+
+
