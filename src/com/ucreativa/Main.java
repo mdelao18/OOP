@@ -6,11 +6,11 @@ import com.ucreativa.familia.Melissa;
 public class Main {
 
     public static void main(String[] args) {
-	Melissa bella = new Melissa();
-    Lilliana mama = new Lilliana("Hola mi chiquita");
-    mama.setAge();
+	Melissa hija = new Melissa("Hola mamita", 32, "ver peliculas");
 
-    int age = mama.getAge();
-        System.out.println("La edad de mi madre es " + age +" años, y su hobby es " +mama.getHobby());
+	Lilliana mama = new Lilliana("Hola mi chiquita",62,"hacer ejercicio");
+
+        System.out.println("La edad de mi madre es " + mama.getAge() +" años, y su hobby es " +mama.getHobby());
+        System.out.println("Mi edad es  " + hija.getAge() +" años, y mi hobby es " + hija.getHobby());
     }
 }

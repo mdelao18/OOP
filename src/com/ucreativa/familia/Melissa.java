@@ -1,8 +1,14 @@
 package com.ucreativa.familia;
 
-public class Melissa {
 
-    public Melissa(){
-        System.out.println("Yo soy Melissa");
+public class Melissa extends Lilliana{
+
+
+    public  Melissa (String saludo, int age, String hobby){
+        super(saludo, age, hobby);
     }
+
+
 }
+
+
