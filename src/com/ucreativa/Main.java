@@ -6,6 +6,7 @@ import com.ucreativa.familia.Melissa;
 public class Main {
 
     public static void main(String[] args) {
+        // Usando herencia
 	Melissa hija = new Melissa("Hola mamita", 32, "ver peliculas");
 	Lilliana mama = new Lilliana("Hola mi chiquita",62,"hacer ejercicio");
 
