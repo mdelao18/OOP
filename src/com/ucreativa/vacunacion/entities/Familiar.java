@@ -1,4 +1,4 @@
-package com.ucreativa.vacunacion;
+package com.ucreativa.vacunacion.entities;
 
 public class Familiar extends Persona {
 
@@ -8,7 +8,8 @@ public class Familiar extends Persona {
         super(nombre, cedula, edad, riesgo);
         this.parentesco = parentesco;
     }
-    public String getParentesco(){
+
+    public String getParentesco() {
         return parentesco;
     }
 
