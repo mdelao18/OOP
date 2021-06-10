@@ -4,18 +4,20 @@ import com.ucreativa.vacunacion.entities.Amigo;
 import com.ucreativa.vacunacion.entities.Familiar;
 import com.ucreativa.vacunacion.entities.Persona;
 import com.ucreativa.vacunacion.repositories.InMemoryRepository;
+import com.ucreativa.vacunacion.repositories.Repository;
 
+import java.io.IOException;
 import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         Scanner in = new Scanner(System.in);
 
         //List<BitacoraVacunas> db = new ArrayList<>();
-        InMemoryRepository repo = new InMemoryRepository();
+        Repository repo = new InMemoryRepository();
 
         while (true) {
             String nombre, cedula, edad, riesgo, isAmigo, relacion, facebook, parentezco, marca, print;
