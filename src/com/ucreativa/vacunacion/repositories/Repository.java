@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface Repository {
 
-    void  save (Persona persona, String marca, Date date) throws IOException;
+    void  save (Persona persona, String marca, Date date);
        List<String> get ();
 }
