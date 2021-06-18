@@ -15,12 +15,10 @@ public class FrontEnd extends JFrame {
         super(titulo);
     }
 
-
     public void build() {
         this.construccionPantalla();
         this.crearComponentes();
         super.setVisible(true);
-
     }
 
 
@@ -32,7 +30,6 @@ public class FrontEnd extends JFrame {
 
 
     private void agregarComponentes(Component Componente) {
-
         super.getContentPane().add(Componente);
     }
 
@@ -81,16 +78,16 @@ public class FrontEnd extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 BitacoraServices service = new BitacoraServices(new FileRepository());
-                service.save(txtNombre.getText(),
-                        txtCedula.getText(),
-                        txtEdad.getText(),
-                        txtRiesgo.isSelected(),
-                        txtIsAmigo.isSelected(),
-                        txtRelacion.getText(),
-                        txtFacebook.getText(),
-                        txtParentesco.getText(),
-                        txtMarca.getText());
-
+                try {
+                    service.save(txtNombre.getText(),
+                            txtCedula.getText(),
+                            txtEdad.getText(),
+                            txtRiesgo.isSelected(),
+                            txtIsAmigo.isSelected(),
+                            txtRelacion.getText(),
+                            txtFacebook.getText(),
+                            txtParentesco.getText(),
+                            txtMarca.getText());
 
                     txtNombre.setText("");
                     txtCedula.setText("");
@@ -102,9 +99,12 @@ public class FrontEnd extends JFrame {
                     txtParentesco.setText("");
                     txtMarca.setText("");
 
-
                     String reporte = String.join("\n", service.get());
                     JOptionPane.showMessageDialog(((JButton) e.getSource()).getParent(), reporte);
+
+                } catch (Exception error) {
+                    JOptionPane.showMessageDialog(((JButton) e.getSource()).getParent(), error.getMessage());
+                }
             }
         });
 
@@ -138,8 +138,6 @@ public class FrontEnd extends JFrame {
         this.agregarComponentes(txtMarca);
 
         this.agregarComponentes(salvar);
-
-
     }
 
 }
