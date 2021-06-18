@@ -1,7 +1,6 @@
 package com.ucreativa.vacunacion.entities;
 
 import java.util.Date;
-//Clase BitacoraVacunas agregada
 public class BitacoraVacunas {
 
     private Persona persona;

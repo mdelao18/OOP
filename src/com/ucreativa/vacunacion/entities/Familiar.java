@@ -10,7 +10,11 @@ public class Familiar extends Persona {
     }
 
     public String getParentesco() {
-        return parentesco;
+        return this.parentesco;
     }
 
+    @Override
+    public String toString() {
+        return this.parentesco + " " + super.getNombre();
+    }
 }

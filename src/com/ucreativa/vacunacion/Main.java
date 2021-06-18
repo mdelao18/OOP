@@ -17,8 +17,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        FrontEnd fe =  new FrontEnd("Sistema de Vacunacion");
+        FrontEnd fe = new FrontEnd("Sistema de Vacunacion");
         fe.build();
+
+    }
+}
 
        /* Scanner in = new Scanner(System.in);
         BitacoraServices services = new BitacoraServices(new FileRepository());
@@ -65,7 +68,5 @@ public class Main {
             }
 
         }*/
-    }
 
-}
 

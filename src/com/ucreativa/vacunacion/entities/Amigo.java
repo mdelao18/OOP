@@ -19,4 +19,17 @@ public class Amigo extends Persona {
     public String getFacebook() {
         return facebook;
     }
+
+    public void setRelacion(String relacion) {
+        this.relacion = relacion;
+    }
+
+    public void setFacebook(String facebook) {
+        this.facebook = facebook;
+    }
+
+    @Override
+    public String toString() {
+        return super.getNombre();
+    }
 }
