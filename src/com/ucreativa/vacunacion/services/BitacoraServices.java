@@ -11,26 +11,29 @@ import java.util.List;
 
 public class BitacoraServices
 {
-    private Repository repository;
+    private final Repository repository;
+    private ContadorRiesgo contador;
 
     public BitacoraServices(Repository repository){
         this.repository= repository;
+        this.contador =  new ContadorRiesgo().getInstance();
     }
 
-    public void save( String nombre, String cedula,String txtEdad, Boolean txtRiesgo, Boolean txtIsAmigo, String relacion,
+    public void save( String nombre, String cedula,String txtEdad, Boolean riesgo, Boolean isAmigo, String relacion,
                           String facebook,String  parentesco,String marca) throws ErrorEnEdadException {
 
 
-        int edad = 0;
+        int edad;
         try {
             edad = Integer.parseInt(txtEdad);
         }catch  (NumberFormatException x ) {
 
             throw new ErrorEnEdadException(txtEdad);
         }
+    if (riesgo){
+        this.contador.sumarRiesgo();
+    }
 
-        boolean isAmigo = txtIsAmigo.equals("A");
-        boolean riesgo = txtRiesgo.equals("S");
         Persona persona;
 
         if (isAmigo) {
@@ -43,6 +46,7 @@ public class BitacoraServices
 
     }
     public List<String> get(){
+        System.out.println( "La cantidad de personas con riesgo es: " + this.contador.getCantidadRiesgo());
         return this.repository.get();
     }
 
